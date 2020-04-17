@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lato&display=swap");
+
+* {
+  font-family: "Acme", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1da0ef;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.neumorph-container {
+  width: 550px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #1da0ef;
+  display: flex;
+}
+
+.neumorph-container .form {
+  width: 300px;
+  height: 500px;
+  margin: 15px 5px;
+  background-color: #1da0ef;
+  text-align: center;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  border-radius: 15px;
+  animation: animate 1s forwards 0.2s ease-in;
+}
+
+.neumorph-container h4 {
+  font-size: 1.1rem;
+  color: #001f3f;
+  letter-spacing: 1;
+}
+
+.neumorph-container .form input {
+  box-shadow: inset 5px 5px 5px #1988cb, inset -5px -5px 5px #21b8ff;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 42px;
+  margin-bottom: 25px;
+  outline: none;
+  background-color: transparent;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form input::placeholder {
+  color: #001f3f;
+}
+
+.form input:hover::placeholder {
+  color: #1900b4 !important;
+  transition: all 1s ease;
+}
+
+.form input:active,
+.form input:hover {
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  transition: all 0.5s ease;
+  color: #1900b4 !important;
+}
+
+.social-media {
+  width: 300px;
+  height: 500px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  border-radius: 15px;
+  z-index: 555;
+  background-color: #1da0ef;
+  transform: translateX(-278px);
+  margin: 15px 5px;
+  animation: avadaKedavara 1s forwards 0.2s ease;
+}
+
+.google,
+.twitter,
+.facebook {
+  width: 202px;
+  height: 42px;
+  background-color: transparent;
+  background-color: #d2d0d026;
+  color: #001f3f;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.facebook:hover,
+.twitter:hover,
+.google:hover {
+  box-shadow: inset 5px 5px 5px #1988cb, inset -5px -5px 5px #21b8ff;
+  color: #1900b4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+}
+
+.social-icons .fa {
+  box-shadow: inset 5px 5px 5px #1988cb, inset -5px -5px 5px #21b8ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.social-icons .fa:hover {
+  color: #1900b4;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+}
+
+#stylish-button {
+  width: 200px;
+  height: 42px;
+  background-color: transparent;
+  color: #001f3f;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  margin-top: 25px;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#stylish-button:hover {
+  box-shadow: inset 5px 5px 5px #1988cb, inset -5px -5px 5px #21b8ff;
+  transition: all 1s ease;
+  color: #1900b4;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  display: none;
+}
+
+.custom-file-input::before {
+  content: "Upload Your Picture \00a0";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  top: 10px;
+}
+
+.custom-file-input::after {
+  font-family: "FontAwesome";
+  content: "\f118";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  top: 10px;
+}
+
+/* keyframe animations */
+@keyframes avadaKedavara {
+  0% {
+    transform: translateX(-278px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* basic responsiveness */
+
+@media screen and (max-width: 576px) {
+  .neumorph-container {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+
+/*
+**********************************************************************************************************
+                                     Stylesheet for the profile view page
+**********************************************************************************************************
+*/
+
+#profile-view .profile {
+  width: 692px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #1da0ef;
+}
+#profile-view .profile-card {
+  width: 300px;
+  height: 500px;
+  margin: 50px auto;
+  background-color: #1da0ef;
+  box-shadow: 5px 5px 5px #1988cb, -5px -5px 5px #21b8ff;
+  border-radius: 25px;
+}
+
+#profile-view .profile-background {
+  border-radius: 25px;
+  position: relative;
+}
+
+#profile-view .profile-background img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: inset 5px 5px 5px #1988cb, inset -5px -5px 5px #21b8ff;
+}
+
+#profile-view .profile-background img.profile-image {
+  position: absolute;
+  left: 86px;
+  bottom: -46px;
+  box-shadow: 5px 5px 5px #dadada8e, -5px -5px 5px #f1f3f6;
+  border-radius: 50%;
+}
+
+#profile-view .profile-content {
+  background-color: transparent;
+  height: 250px;
+  margin-top: -18px;
+}
+
+#profile-view h1 {
+  font-size: 1.8rem;
+  color: #001f3f;
+  text-align: center;
+  padding-top: 56px;
+}
+
+#profile-view p {
+  font-size: 1.2rem;
+  color: #001f3f;
+  font-weight: 600;
+  text-align: center;
+  line-height: 8px;
+}
+
+#profile-view .fa-2x {
+  text-align: center;
+  font-size: 2em;
+}
+
+img.profile-image {
+  width: 120px !important;
+  height: 120px !important;
+}
+
+/*
+**********************************************************************************************************
+                                        Codes are magic
+                                        madhvendra singh
+                                     madhvendras84@gmail.com
+**********************************************************************************************************
+*/
